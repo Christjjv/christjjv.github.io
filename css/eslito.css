@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,300;1,400;1,700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+body{
+    background: #f1faff;
+}
+
+.container_card{
+    max-width: 1200px;
+    margin: auto;
+    *background: #b88888;
+    margin-top: 100px;/*Este es para que se separe de arriba unos 100px*/
+    perspective: 1000px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card_father{
+    margin: 20px;/*Este es para que se separe de un objeto a otro*/
+    perspective: 1000px;
+}
+
+.card_father:hover .card{ /*este es para que rote todo lo que contiene la class card*/
+    transform: rotateY(180deg);
+}
+
+
+.card{
+    width: 350px;
+    height: 400px;
+    *background: #c0c0ec;
+    position: relative;/*este como es el padre, es para que sus hijos se empaqueten entre si*/
+    transform-style: preserve-3d;
+    transition: all 600ms;
+}
+
+.card_front,
+.card_back{
+    width: 100%;
+    height: 100%;
+    position: absolute;/*este es que se pega entre si; y se relaciona solo con su padre*/
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;/*este para que la parte de atras no se muestre por la palabra back face-vis*/
+    transform-style: preserve-3d;
+    border-radius: 20px;
+}
+
+.card_front{
+    background-size: cover;
+    background-position: center;
+}
+
+.card_back{
+    transform: rotatey(180deg);/*este para que gire cuando se da la vuelta*/
+    background: white;
+}
+
+.body_card_front{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    transform: translateZ(60px);
+}
+
+.bg{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+}
+
+.body_card_back{
+    padding: 40px;
+    text-align: center;
+    transform: translateZ(60px);
+}
+
+.body_card_back p{
+    margin-top: 30px;
+    font-size: 18px;
+}
+
+.body_card_back input{
+    padding: 10px 40px;
+    margin-top: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    color: white;
+    background: #58b0f6;
+    box-shadow: 1px 1px 30px -5px #58b0f6;
+    border-radius: 10px;
+    transition: box-shadow 600ms;
+}
+
+.body_card_back input:hover{
+    box-shadow: 1px 1px 30px 0px #449de6;   
+}
