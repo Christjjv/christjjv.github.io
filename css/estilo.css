@@ -410,7 +410,7 @@ footer{
 .appWhatsapp{
     position: fixed;
     right: 15px;
-    width: 45px;
+    width: 40px;
     bottom: 57px; 
     z-index: 1000;
 }
@@ -419,3 +419,17 @@ footer{
     width: 100%;
     height: auto;
 }
+
+/******************Todo lo que es Messenger Facebook*************/
+.fb-customerchat{
+    position: fixed;
+    right: 15px;
+    width: 40px;
+    bottom: 7px; 
+    z-index: 1000;
+}
+/*
+.appWhatsapp img{
+    width: 100%;
+    height: auto;
+}*/
