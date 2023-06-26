@@ -409,9 +409,9 @@ footer{
 /********************Todo lo que es Whastapp*************/
 .appWhatsapp{
     position: fixed;
-    right: 15px;
-    width: 40px;
-    bottom: 57px; 
+    right: 25px;
+    width: 45px;
+    bottom: 70px; 
     z-index: 1000;
 }
 
