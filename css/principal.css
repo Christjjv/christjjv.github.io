@@ -375,13 +375,12 @@ footer{
     text-decoration: none;
     background: #00bb2d;
     color: white;
-    width: 40px;
-    height: 40px;
+    width: 43px;
+    height: 43px;
     text-align: center;
     border-radius: 50%;
     box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
     transition: all 500ms ease;
-
     z-index: 1000;
 }
 
