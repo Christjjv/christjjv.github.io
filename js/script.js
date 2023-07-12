@@ -14,7 +14,7 @@ window.onscroll = function(){
 var chatbox = document.getElementById('fb-customer-chat');
 chatbox.setAttribute("page_id", "112327411899958");
 chatbox.setAttribute("attribution", "biz_inbox");
-chatbox.setAttribute("theme_color", "#56638c")
+chatbox.setAttribute("theme_color", "#56638c");
 
 window.fbAsyncInit = function() {
     FB.init({
