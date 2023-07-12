@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*------------------------------------------------------------------------------*/
+:root{
+    --color_text-primary: #ab29ca;
+    --color_text-secundary: #101e2c;
+    --color_text-tertiary: #485663;
+    --main_color-primary: #9a00bf;
+    --main_color-secundary: #f4d4db;
+    --background-color: #fafbfe;
+    --lowText_font-size: 16px;
+    --text_size-title: 40px;
+    --text_title-card: 24px;
+    --text_title-cardv2: 20px;
+    --text_paragraph: 16px;
+    --box_shadow-primary: 0px 6px 50px -20px rgba(0, 0, 0, 0.2);
+}
+/*------------------------------------------------------------------------------*/
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+header{
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    z-index: 100;
+    background: #56638c; /*#56638c, #868ea6*/
+}
+
+.container-header{
+    max-width: 1200px;
+    height: 100%;
+    margin: auto;
+    flex-direction: column;
+    align-items: center;     
+}
+
+.header1{
+    max-width: 1200px;
+    display: flex;
+    margin: auto;
+    z-index: 1;
+    padding: 3px 20px;
+    justify-content: space-between;
+    align-items: center;    
+    padding: 0px 20px;  
+}
+
+/*******************************/
+.header1  .header-telef{
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 0px 20px;
+}
+
+.header1  .header-telef i{
+    font-size: 12px;
+    margin-right: 7px;
+    color: #f2f2f2;
+}
+
+.header1  .header-telef label{
+    font-size: 10px;
+    font-weight: 400;
+    color: #f2f2f2;
+}
+/*******************************/
+/*******************************/
+.header1  .header-email{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+    padding: 0px 20px;
+}
+
+.header1  .header-email i{
+    font-size: 12px;
+    margin-right: 7px;
+    color: #f2f2f2;
+}
+
+.header1  .header-email a{
+    font-size: 10px;
+    font-weight: 400;
+    color: #f2f2f2;
+}
+
+.header1  .header-email a:hover{
+    color: #c5c5c5;
+}
+/*******************************/
+
+/********************************/
+.header-division {
+    margin-top: 2px;
+    border: none;
+    height: 1px;
+    background: #930001;
+    opacity: 0.1;
+}
+/********************************/
+
+/********************************/
+.header2{
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.logo img{
+    width: 300px;
+    cursor: default;
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+}
+
+.menu nav{
+    margin: 0px 20px;
+}
+
+.menu nav ul{
+    display: flex;
+}
+
+.menu nav ul li{
+    list-style: none;
+    margin: 20px 16px;
+}
+
+.menu nav ul li a{
+    color: black;
+    font-size: 14px;
+    position: relative;
+    font-weight: 500;
+    color: #f2f2f2;
+}
+
+.menu nav ul li a:hover{
+    color: #c5c5c5;
+}
+
+/*********** Boton ************/
+.btn-quote{
+    display: block;
+    padding: 8px 40px;
+    border: 2px solid #9a00bf;
+    border-radius: 8px;
+    font-weight: 500;
+    margin: 0px 20px;
+    transition: all 300ms;
+}
+
+.btn-quote:hover{
+    color: white;
+    background: #9a00bf;
+}
+
+/*************** Redes sociales *********************/
+.menu .social-media{
+    margin: 0px 10px;
+}
+
+.menu .social-media a{
+    margin: 0px 4px;
+}
+
+.menu .social-media img{
+    width: 20px;
+}
+
+
+
+/*------------------------- Portada ---------------------------------*/
+.container-cover{
+    padding-top: 100px; /*guarde una separacion de la parte de arriba porque el header y .container-header tienen una altura de 100px*/
+    padding-bottom: 100px; /* es para colocar un margen */
+    background: var(--main_color-secundary);
+}
+
+.cover{
+    max-width: 1200px;
+    margin: auto; /*este es para que automaticamente se centre dependiendo del codigo anterior*/
+    margin-top: 100px;/*este e para que se despeque de la parte de arriba*/
+    display: flex; /* se coloque uno atras de la otra */
+    align-items: center; /* este es para que todo el contenido se centre de manera horizontal*/
+    padding: 0px 20px; /* 0px de arriba y abajo y 20px en los costados*/
+}
+
+.text-cover{
+    width: 100%; /* este es para que sea su ancho maximo del padre */
+    padding-right: 150px; /*para que guarde un espaciado con la imagen */
+}
+
+.text-cover h1{
+    font-size: 50px;
+    color: var(--color_text-secundary);
+}
+
+.text-cover p{
+    font-size: var(--text_paragraph);
+    margin-top: 40px; /* este es para que se despegue del titulo */
+    color: var(--color_text-tertiary);
+}
+
+.btn-text{
+    display: block; /*este es para que sea un bloque como un cuadro normal*/
+    width: 150px;
+    margin-top: 40px; /*este es para que se despegue del texto */
+    padding: 10px 20px; /*esto se modifica dentro del boton*/
+    text-align: center; /*este es para que el texto se coloque en el centro */
+    font-weight: 500;
+    background: var(--main_color-primary);
+    color: white;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 300ms;
+}
+
+.btn-text:hover{
+    background: transparent;
+    border: 2px solid var(--main_color-primary);
+    color: var(--color_text-primary);
+}
+
+.image-cover{
+    width: 100%;
+}
+
+.image-cover img{
+    width: 550px;
+}
