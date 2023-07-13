@@ -177,7 +177,7 @@ nav ul li a:hover{
 }
 
 .naveg-movi2{
-    height: 70px;
+    height: 60px;
     box-shadow: 1px 1px 10px 0px #56638ce0;
     background: #868ea6; 
 }
@@ -246,21 +246,21 @@ nav ul li a:hover{
 @media screen and (max-width: 410px){
 
     .header-telef i{
-        font-size: 8px;
+        font-size: 6px;
     }
     
     .header-telef label{
-        font-size: 7px;
-        font-weight: 300;
+        font-size: 5px;
+        font-weight: 200;
     }
 
     .header-email i{
-        font-size: 8px;
+        font-size: 6px;
     }
     
     .header-email a{
-        font-size: 7px;
-        font-weight: 300;
+        font-size: 5px;
+        font-weight: 200;
     }
 }
 /****** Este es para desplazar menu ***************/
@@ -335,8 +335,31 @@ nav ul li a:hover{
 
 
 
+/****** Contenedor de whastapp y messenger ******/
+.whast-messeng{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
+.whast-messeng a{
+    margin-top: 4px;
+}
+.whast-messeng img{
+    width: 50px;
+    padding: 4px;
+    background: rgba(0, 0, 0, 0.0);
+    cursor: pointer;
+    border-radius: 100%;
+    transition: all 300ms;
+}
 
+.whast-messeng a:hover img{
+    background: rgba(0, 0, 0, 0.10);
+}
 
 /*********** Footer ********************/
 footer{
@@ -501,7 +524,7 @@ footer{
 
 
 /********************Todo lo que es Whastapp*************/
-.appWhatsapp{
+/*.appWhatsapp{
     right: 25px;
     bottom: 75px;
     position: fixed;
@@ -527,4 +550,4 @@ footer{
 
 .appWhatsapp i{
     font-size: 27px;
-}
+}*/
