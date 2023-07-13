@@ -4,190 +4,90 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 
-
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
-    font-family: 'Poppins', sans-serif;
 }
 
-body{
-    background: #f2f2f2;
-}
-
-/*#56638c, #868ea6*/
-/*************** Relacionado al Header **************/
 header{
     width: 100%;
     height: 100px;
+    font-family: 'Poppins', sans-serif;
     position: fixed;
-    top: 0; 
-    right: 0; 
-    z-index: 100;
-    *background: #2e3559; 
-    *background: #56638c;
-    *background: #868ea6;
+    top: 0;
+    right: 0;
+    z-index: 100; 
+    *background: #7e7e7e;
+
     transition: all 300ms;
 }
 
-.container-up{
-    width: 100%;
-    height: 20px;
-    background: #2e3559;
-    transition: all 300ms;
-}
-.container-down{
-    width: 100%;
-    height: 80px;
-    background: #868ea6;
-    transition: all 300ms;
-}
-
-.container-header1{
+.container_header{
     max-width: 1200px;
     height: 100%;
     display: flex;
     justify-content: space-between;
     margin: auto;
-    padding: 0px 20px;   
+    padding: 0px 20px;
 }
 
-.container-header2{
-    max-width: 1200px;
+header .logo{
     height: 100%;
-    display: flex;
-    justify-content: space-between;
-    margin: auto;
-    padding: 0px 20px;  
-}
-
-/*******************************/
-.container-header1  .header-telef{
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-}
-
-.container-header1  .header-telef i{
-    font-size: 12px;
-    margin-right: 7px;
-    color: white;
-}
-
-.container-header1  .header-telef label{
-    font-size: 10px;
-    font-weight: 500;
-    color: white;
-}
-
-/*******************************/
-.container-header1  .header-email{
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    position: relative;
-}
-
-.container-header1  .header-email i{
-    font-size: 12px;
-    margin-right: 7px;
-    color: white;
-}
-
-.container-header1  .header-email a{
-    font-size: 10px;
-    font-weight: 500;
-    color: white;
-}
-
-.container-header1  .header-email a:hover{
-    color: #c5c5c5;
-}
-
-.logo{
-    height: 100%;
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
 }
 
 .logo img{
-    width: 300px;
+    width: 150px;
 }
 
-.container-naveg{
-    height: 100%;
+.container_naveg{
     position: relative;
+    height: 100%;
 }
 
 nav{
-    height: 100%;
+    height: 100%; /*aqui indica que va a tener el mismo alto que su padre */
+    *background: yellowgreen;
 }
 
 nav ul{
     height: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; /*justify-content: y align-items: siempre funciona con display: flex;*/
 }
 
 nav ul li{
     margin: 0px 20px;
-    list-style: none;
+    list-style: none;/*aqui indica que no desea los puntitos de la lista*/
 }
 
 nav ul li a{
-    color: white;
+    color: #373737;
     font-size: 14px;
 }
 
-nav ul li a:hover{
-    color: #c5c4c4;
-}
-
-.btn-inicio{/*#56638c, #868ea6*/
-    background: #56638c;
-    padding: 8px 30px;
-    border: none;
+.select{
+    background: #359ef9;
+    padding: 10px 30px;
+    color: white;
     border-radius: 20px;
-    box-shadow: 1px 1px 30px -5px #8a9bd149;
-    cursor: pointer;
-    transition: box-shadow 500ms;
 }
 
-.btn-inicio:hover{
-    box-shadow: 1px 1px 30px -5px #8a9bd194;
-}
-
-
-/****** Modificacion de la barra de navegacion *******/
-.naveg-movi{
+.naveg-mod{
     height: 70px;
-    box-shadow: 1px 1px 10px 0px #56638ce0;
-    background: #2e3559; 
+    box-shadow: 1px 1px 10px 0px #00000010;
+    background: white;
 }
 
-.naveg-movi1{
-    height: 15px;
-    box-shadow: 1px 1px 10px 0px #56638ce0;
-    background: #2e3559; 
-}
-
-.naveg-movi2{
-    height: 70px;
-    box-shadow: 1px 1px 10px 0px #56638ce0;
-    background: #868ea6; 
-}
-/******************* Termina Header ********************/
-
-/**************** Para el icono de menu ***************/
 .btn-menu{
     width: 50px;
     height: 50px;
-    color: white;
+    *background: red;
     font-size: 20px;
     cursor: pointer;
     display: flex;
@@ -199,16 +99,19 @@ nav ul li a:hover{
 }
 
 .btn-menu:hover{
-    background: #cfdcff;
+    background: #f5f5f5;
 }
 
-@media screen and (max-width: 967px){
-    
+
+
+
+
+@media screen and (max-width: 760px){
     .btn-menu{
         display: flex;
     }
 
-    .container-naveg{
+    .container_naveg{
         display: flex;
         justify-content: center;
         align-items: center;
@@ -216,11 +119,12 @@ nav ul li a:hover{
 
     nav{
         height: 100%;
-        background: #2e3559;
+        background: #f1faff;
         position: fixed;
-        top: 0px;
+        top: 0;
         right: -180px;
         padding: 0px 40px;
+        *display: none;
         transition: all 300ms;
     }
 
@@ -235,24 +139,11 @@ nav ul li a:hover{
     nav ul li{
         margin: 20px 0px;
     }
-
-    nav ul li a{
-        margin-bottom: 5px;
-        display: flex;
-        justify-content: flex-end;
-    }
 }
 
-/****** Este es para desplazar menu ***************/
 .move-content{
     right: 180px;
 }
-/**************************************************/
-
-
-
-
-
 
 
 /****************************** MUESTRA ***************************************/
@@ -283,34 +174,6 @@ nav ul li a:hover{
     height: 250px;
     background: var(--color-esqueleto);
     margin: 20px;
-}
-
-
-
-
-
-
-/******************************************************/
-
-.texto{
-    position:relative;
-    right: 0;
-    /*
-    max-width: 1200px;
-    margin-top: 100px;
-    padding: 0px 20px;
-    margin: auto;*/
-}
-
-.texto h1{
-    margin-top: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.texto p{
-    margin-top: 20px;
 }
 
 

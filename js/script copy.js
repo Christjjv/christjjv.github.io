@@ -1,19 +1,13 @@
 /******************* Para el menu desplazandose ***********************/
 window.onscroll = function(){
-    var_scroll = document.documentElement.scrollTop; 
-    /*var_header = document.getElementById("cabecera");*/
-    var_header1 = document.getElementById("idUp");
-    var_header2 = document.getElementById("idDown");
+    var_scroll = document.documentElement.scrollTop; /* aqui es el numero de pixeles que recorremos */
+    var_header = document.getElementById("cabecera");
 
     if(var_scroll > 20){
-        /*var_header.classList.add('naveg-movi');*/
-        var_header1.classList.add('naveg-movi1');
-        var_header2.classList.add('naveg-movi2');
+        var_header.classList.add('naveg-movi');
     }else
     if(var_scroll < 20){
-        /*var_header.classList.remove('naveg-movi');*/
-        var_header1.classList.remove('naveg-movi1');
-        var_header2.classList.remove('naveg-movi2');
+        var_header.classList.remove('naveg-movi');
     }
 }
 
