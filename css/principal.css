@@ -243,6 +243,26 @@ nav ul li a:hover{
     }
 }
 
+@media screen and (max-width: 410px){
+
+    .header-telef i{
+        font-size: 8px;
+    }
+    
+    .header-telef label{
+        font-size: 7px;
+        font-weight: 300;
+    }
+
+    .header-email i{
+        font-size: 8px;
+    }
+    
+    .header-email a{
+        font-size: 7px;
+        font-weight: 300;
+    }
+}
 /****** Este es para desplazar menu ***************/
 .move-content{
     right: 180px;
