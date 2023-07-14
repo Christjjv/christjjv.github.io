@@ -11,13 +11,25 @@
     box-sizing: border-box;
     text-decoration: none;
     font-family: 'Poppins', sans-serif;
+    font-family: '';
+}
+
+:root{
+    --color0-blanco: #ffffff;
+    --color1-med-neg: #0d0d0d;
+    --color2-med-blan: #f2f2f2;
+    --color3-plo-azu: #868ea6;
+    --color4-med-azu: #56638c;
+    --color5-cas-azu: #2e3559;
+    --color6-color3-opa: #56638ce0;
+    --color7-azu-opa: #252b476c;
+    --color8-color3-opa1: #868ea667;
 }
 
 body{
-    background: #f2f2f2;
+    background: var(--color2-med-blan);
 }
 
-/*#56638c, #868ea6*/
 /*************** Relacionado al Header **************/
 header{
     width: 100%;
@@ -26,22 +38,20 @@ header{
     top: 0; 
     right: 0; 
     z-index: 100;
-    *background: #2e3559; 
-    *background: #56638c;
-    *background: #868ea6;
     transition: all 300ms;
 }
 
 .container-up{
     width: 100%;
     height: 20px;
-    background: #2e3559;
+    background: var(--color5-cas-azu);
     transition: all 300ms;
 }
+
 .container-down{
     width: 100%;
     height: 80px;
-    background: #868ea6;
+    background: var(--color0-blanco);
     transition: all 300ms;
 }
 
@@ -74,13 +84,13 @@ header{
 .container-header1  .header-telef i{
     font-size: 12px;
     margin-right: 7px;
-    color: white;
+    color: var(--color0-blanco);
 }
 
 .container-header1  .header-telef label{
     font-size: 10px;
     font-weight: 500;
-    color: white;
+    color: var(--color0-blanco);
 }
 
 /*******************************/
@@ -94,13 +104,13 @@ header{
 .container-header1  .header-email i{
     font-size: 12px;
     margin-right: 7px;
-    color: white;
+    color: var(--color0-blanco);
 }
 
 .container-header1  .header-email a{
     font-size: 10px;
     font-weight: 500;
-    color: white;
+    color: var(--color0-blanco);
 }
 
 .container-header1  .header-email a:hover{
@@ -140,22 +150,27 @@ nav ul li{
 }
 
 nav ul li a{
-    color: white;
-    font-size: 14px;
+    color: var(--color5-cas-azu);
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    transition: all 300ms ease;
 }
 
 nav ul li a:hover{
     color: #c5c4c4;
+    transform: scale(1.1);
 }
 
-.btn-inicio{/*#56638c, #868ea6*/
-    background: #56638c;
+.btn-inicio{
+    background: var(--color2-med-blan);
     padding: 8px 30px;
     border: none;
     border-radius: 20px;
     box-shadow: 1px 1px 30px -5px #8a9bd149;
     cursor: pointer;
-    transition: box-shadow 500ms;
+    transition: all 300ms ease;
+    *transition: box-shadow 500ms;
 }
 
 .btn-inicio:hover{
@@ -166,20 +181,20 @@ nav ul li a:hover{
 /****** Modificacion de la barra de navegacion *******/
 .naveg-movi{
     height: 70px;
-    box-shadow: 1px 1px 10px 0px #56638ce0;
-    background: #2e3559; 
+    box-shadow: 1px 1px 10px 0px var(--color6-color3-opa);
+    background: var(--color5-cas-azu); 
 }
 
 .naveg-movi1{
     height: 15px;
-    box-shadow: 1px 1px 10px 0px #56638ce0;
-    background: #2e3559; 
+    box-shadow: 1px 1px 10px 0px var(--color6-color3-opa);
+    background: var(--color5-cas-azu); 
 }
 
 .naveg-movi2{
-    height: 60px;
-    box-shadow: 1px 1px 10px 0px #56638ce0;
-    background: #868ea6; 
+    height: 70px;
+    box-shadow: 1px 1px 10px 0px var(--color6-color3-opa);
+    background: var(--color0-blanco); 
 }
 /******************* Termina Header ********************/
 
@@ -187,7 +202,7 @@ nav ul li a:hover{
 .btn-menu{
     width: 50px;
     height: 50px;
-    color: white;
+    color: var(--color4-med-azu);
     font-size: 20px;
     cursor: pointer;
     display: flex;
@@ -199,10 +214,10 @@ nav ul li a:hover{
 }
 
 .btn-menu:hover{
-    background: #cfdcff;
+    background: var(--color8-color3-opa1);
 }
 
-@media screen and (max-width: 967px){
+@media screen and (max-width: 990px){
     
     .btn-menu{
         display: flex;
@@ -216,7 +231,7 @@ nav ul li a:hover{
 
     nav{
         height: 100%;
-        background: #2e3559;
+        background: var(--color0-blanco);
         position: fixed;
         top: 0px;
         right: -180px;
@@ -251,7 +266,7 @@ nav ul li a:hover{
     
     .header-telef label{
         font-size: 5px;
-        font-weight: 200;
+        font-weight: 100;
     }
 
     .header-email i{
@@ -284,10 +299,6 @@ nav ul li a:hover{
     *background: #fc0909;
 }
 
-:root{
-    --color-esqueleto:#EFF3F5;
-}
-
 .container_article{
     max-width: 1000px;
     padding: 0px 20px;
@@ -301,7 +312,7 @@ nav ul li a:hover{
 .container_article .box_article{
     width: 200px;
     height: 250px;
-    background: var(--color-esqueleto);
+    background: var(--color0-blanco);
     margin: 20px;
 }
 
@@ -339,7 +350,7 @@ nav ul li a:hover{
 .whast-messeng{
     position: fixed;
     bottom: 20px;
-    right: 20px;
+    right: 8px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -364,9 +375,9 @@ nav ul li a:hover{
 /*********** Footer ********************/
 footer{
     width: 100%;
-    background-image: url(../imagen/background-footer.svg);
-    background: #2e3559;
-    color: white;
+    *background-image: url(../imagen/background-footer.svg);
+    background: var(--color5-cas-azu);
+    color: var(--color0-blanco);
 }
 
 .container-footer{
@@ -408,34 +419,34 @@ footer{
 }
 
 .columna3 .direccion{
-    color: #dee7ec;
+    color: var(--color2-med-blan);
 }
 
 .columna3 .informacion p{
     margin-left: 15px;
     max-width: 200px;
     font-size: 12px;
-    color: #dee7ec;
+    color: var(--color2-med-blan);
 }
 
 .columna3 .telefono{
-    color: #dee7ec;
+    color: var(--color2-med-blan);
 }
 
 .columna3 .redes{
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 .columna3 .icon-inf{
     font-size: 20px;
     align-self: center;
-    color: #dee7ec;
+    color: var(--color2-med-blan);
 }
 
 .informacion .icon-redes{
     font-size: 20px;
-    margin: 5px;
-    color: #dee7ec;
+    margin: 2px;
+    color: var(--color2-med-blan);
 
     width: 40px;
     height: 40px;
@@ -465,9 +476,14 @@ footer{
     color: white;
 }
 
+.columna3 .redes .fa-tiktok:hover{
+    background: black;
+    color: white;
+}
+
 .container-derechos{
     width: 100%;
-    background: #252b49;
+    background: var(--color7-azu-opa);
 }
 
 .footer-hijo{
@@ -484,7 +500,7 @@ footer{
 }
 
 .copyright p{
-    color: #dee7ec;
+    color: var(--color2-med-blan);
     font-size: 10px;
 }
 
@@ -495,7 +511,7 @@ footer{
 
 .terminos a, pre{
     text-decoration: none;
-    color:#dee7ec;
+    color:var(--color2-med-blan);
     font-size: 10px;
 }
 
