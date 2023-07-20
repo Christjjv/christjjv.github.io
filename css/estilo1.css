@@ -185,7 +185,7 @@ span.next:hover, span.prev:hover{
     max-width: 1200px;
     margin: auto;
     *background: #b88888;
-    margin-top: 50px;
+    margin-top: 20px;
     perspective: 1000px;
     display: flex;
     justify-content: center;
