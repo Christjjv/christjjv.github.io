@@ -8,6 +8,7 @@
     <title>Colegio Bilingüe Santo Domingo de Guzmán</title>
 
     <link rel="stylesheet" href="css/principal.css">
+    <link rel="stylesheet" href="css/estilo1.css">
     <script src="https://kit.fontawesome.com/44b416c97f.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -82,56 +83,112 @@
 
     <!-- Referente a lo que son los Slider -->
     <div class="container-slider">
-          
-        <input type="radio" id="idRadio1" name="image-slider" hidden />
-        <input type="radio" id="idRadio2" name="image-slider" hidden />
-        <input type="radio" id="idRadio3" name="image-slider" hidden />
-          
-        <div class="slider" id="idSlider">
 
-            <!-- <div class="slider-item" id="lastImageDuplicate">
-                <img src="imagen/slider03.jpg" alt="">
-            </div> -->
-
-            <div class="slider-item first">
-                <img src="imagen/slider01.jpg" alt="">
-            </div>
-
-            <div class="slider-item">
-                <img src="imagen/slider02.jpg" alt="">
-            </div>
-
-            <div class="slider-item">
-                <img src="imagen/slider03.jpg" alt="">
-            </div>
-
-            <!-- <div class="slider-item" id="firstImageDuplicate">
-                <img src="imagen/slider01.jpg" alt="">
-            </div> -->
-
+        <div class="slider">
+            <img src="imagen/slider01.jpg" alt="" class="imagenes active">
+            <img src="Imagen/slider02.jpg" alt="" class="imagenes">
+            <img src="Imagen/slider03.jpg" alt="" class="imagenes">
+            <img src="Imagen/slider04.jpg" alt="" class="imagenes">
+            <img src="Imagen/slider05.jpg" alt="" class="imagenes">
         </div>
 
-        <div class="paginacion">
-
-            <label for="idRadio1" class="paginacion-item active">
-                <img src="imagen/slider01.jpg" alt="">
-            </label>
-
-            <label for="idRadio2" class="paginacion-item">
-                <img src="imagen/slider02.jpg" alt="">
-            </label>
-
-            <label for="idRadio3" class="paginacion-item">
-                <img src="imagen/slider03.jpg" alt="">
-            </label>
-
+        <div class="btn">
+            <span class="next">&#10095;</span>
+            <span class="prev">&#10094;</span>
         </div>
 
-        <!-- <span class="next">&#10095;</span>
-        <span class="prev">&#10094;</span> -->
+        <div class="container-paginacion">
+            <div class="paginacion active" attr="0" onclick="switchImage(this)">
+                <img src="Imagen/slider01.jpg" alt="">
+            </div>
+            <div class="paginacion" attr="1" onclick="switchImage(this)">
+                <img src="Imagen/slider02.jpg" alt="">
+            </div>
+            <div class="paginacion" attr="2" onclick="switchImage(this)">
+                <img src="Imagen/slider03.jpg" alt="">
+            </div>
+            <div class="paginacion" attr="3" onclick="switchImage(this)">
+                <img src="Imagen/slider04.jpg" alt="">
+            </div>
+            <div class="paginacion" attr="4" onclick="switchImage(this)">
+                <img src="Imagen/slider05.jpg" alt="">
+            </div>
+        </div>
 
     </div>
 
+
+    <!-- Referente a las tarjetas en 3D -->
+    <section>
+        <div class="container_card">
+
+            <div class="card_father">
+
+                <div class="card">
+                    <div class="card_front" style="background-image: url(imagen/card3D-01.jpg);">
+                        <div class="bg"></div>
+                        <div class="body_card_front">
+                            <h1>EDUCACIÓN INICIAL</h1>
+                        </div>
+                    </div>
+
+                    <div class="card_back">
+                        <div class="body_card_back">
+                            <h1>EDUCACIÓN INICIAL</h1>
+                            <p>
+                                ¡Aprender jugando! Es la mejor manera en que nuestros niños y niñas pueden iniciar su proceso de aprendizaje. 
+                            </p>
+                            <input type="button" value="Leer más">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card_father">
+                <div class="card">
+                    <div class="card_front" style="background-image: url(imagen/card3D-02.jpg);">
+                        <div class="bg"></div>
+                        <div class="body_card_front">
+                            <h1>EDUCACIÓN BÁSICA ELEMENTAL</h1>
+                        </div>
+                    </div>
+
+                    <div class="card_back">
+                        <div class="body_card_back">
+                            <h1>EDUCACIÓN BÁSICA ELEMENTAL</h1>
+                            <p>
+                                En este nivel, las estudiantes desarrollan habilidades cognitivas y sociales que les permiten relacionarse y afianzar lazos con los demás.
+                            </p>
+                            <input type="button" value="Leer más">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card_father">
+                <div class="card">
+                    <div class="card_front" style="background-image: url(imagen/card3D-03.jpg);">
+                        <div class="bg"></div>
+                        <div class="body_card_front">
+                            <h1>BACHILLERATO</h1>
+                        </div>
+                    </div>
+
+                    <div class="card_back">
+                        <div class="body_card_back">
+                            <h1>BACHILLERATO</h1>
+                            <p>
+                                Se evidencia una formación integral e interdisciplinaria vinculada a los valores de justicia, innovación, ¡solidaridad!
+                            </p>
+                            <input type="button" value="Leer más">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
 
 
 

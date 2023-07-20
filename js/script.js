@@ -21,6 +21,8 @@ window.onscroll = function(){
 }
 
 
+
+
 /*************** Para aparecer menu a lado derecho ***************/
 /*************** Para aparecer menu a lado izquierdo ***************/
 document.getElementById("boton-menu").addEventListener("click", mostrar_menu);
@@ -39,92 +41,107 @@ function mostrar_menu(){
 
 
 /*************** Estido Slider - Carrusel **************/
-/*const carruselSlider = document.querySelector('.slider');
-const itemSlider = document.getElementsByClassName('slider-item');
-const itemPaginacion = document.getElementsByClassName('paginacion-item ');
-const nextBtn = document.querySelector('.next');
-const prevBtn = document.querySelector('.prev');
+//Acceso a las imagenes.
+let sliderImagen = document.querySelectorAll('.imagenes');
 
-let index = 1;
 
-width = itemSlider[0].clientWidth;
-carruselSlider.style.transform = 'translateX('+ (-width * index) + 'px)';
+//Acceso a los botones de siguiente y retroseso
+let btnNext = document.querySelector('.next');
+let btnPrev = document.querySelector('.prev');
 
-function sliderWidth(){
-    width = itemSlider[0].clientWidth;
-}
 
-sliderWidth();
-window.addEventListener('resize', sliderWidth);
+//Acceso a los indicadores
+let itemPaginacion = document.querySelectorAll('.paginacion');
 
-//Go to next slide
-nextBtn.addEventListener('click', nextSlide);
 
-function nextSlide(){
-    if(index >= itemSlider.length - 1){return}
-    carruselSlider.style.transition = 'transform 0.4s ease-out';
-    index++;
-    carruselSlider.style.transform = 'translateX('+ (-width * index) + 'px)';
+var counter = 0;
 
-    itemPaginacionLabel();
-}
 
-//Go to prev slide
-prevBtn.addEventListener('click', prevSlide);
+//Codigo para el boton de siguiente
+btnNext.addEventListener('click', sliderNext);
 
-function prevSlide(){
-    if(index <= 0){return}
-    carruselSlider.style.transition = 'transform 0.4s ease-out';
-    index--;
-    carruselSlider.style.transform = 'translateX('+ (-width * index) + 'px)';
+function sliderNext(){
+    sliderImagen[counter].style.animation = 'next1 0.5s ease-in forwards';
 
-    itemPaginacionLabel();
-}
-
-//return to the primera slider 
-carruselSlider.addEventListener('transitionend', function(){
-    if(itemSlider[index].id === 'firstImageDuplicate'){
-        carruselSlider.style.transition = 'none';
-        index = itemSlider.length - index;
-        carruselSlider.style.transform = 'translateX('+ (- width * index) + 'px)';
-
-        itemPaginacionLabel();
+    if(counter >= sliderImagen.length-1){
+        counter = 0;
+    }else{
+        counter++;
     }
 
-    if(itemSlider[index].id === 'lastImageDuplicate'){
-        carruselSlider.style.transition = 'none';
-        index = itemSlider.length - 2;
-        carruselSlider.style.transform = 'translateX('+ (- width * index) + 'px)';
+    sliderImagen[counter].style.animation = 'next2 0.5s ease-in forwards';
+    paginacionIndicador();
+}
 
-        itemPaginacionLabel();
+
+//Codigo para el boton de retroceso
+btnPrev.addEventListener('click', sliderPrev);
+
+function sliderPrev(){
+    sliderImagen[counter].style.animation = 'prev1 0.5s ease-in forwards';
+
+    if(counter == 0){
+        counter = sliderImagen.length-1;
+    }else{
+        counter--;
     }
-});
 
-//auto sliding
-function autoSlider(){
-    deleteInterval = setInterval(timer, 3000);
+    sliderImagen[counter].style.animation = 'prev2 0.5s ease-in forwards';
+    paginacionIndicador();
+}
+
+// Auto slideing
+function autoSlinding(){
+    deletInterval = setInterval(timer, 3000);
+
     function timer(){
-        nextSlide();
+        sliderNext();
+        paginacionIndicador();
     }
 }
 
-autoSlider();
+autoSlinding();
 
-//stop auto sliding con el mouse
-const mainContainer = document.querySelector('.container-slider');
-mainContainer.addEventListener('mouseover', function(){
-    clearInterval(deleteInterval);
+//Parar el auto sliding cuando se pasa el mouse
+const container = document.querySelector('.container-slider');
+container.addEventListener('mouseover', function(){
+    clearInterval(deletInterval);
 });
 
-//resume sliding con el mouse
-mainContainer.addEventListener('mouseout', autoSlider);
+//Restaurar el sliding cuando se aleja el mouse
+container.addEventListener('mouseout', autoSlinding);
 
-function itemPaginacionLabel(){
-    for(i = 0; i< itemPaginacion.length; i++){
+// ingresar y remover las clases actividad de los indicadores
+function paginacionIndicador(){
+    for(i = 0; i < itemPaginacion.length; i++){
         itemPaginacion[i].className = itemPaginacion[i].className.replace(' active', '');
     }
-    itemPaginacion[index - 1].className += ' active';
-}*/
+
+    itemPaginacion[counter].className += ' active';
+}
+
+// añadir evento click en el indicador
+function switchImage(currentImage){
+    currentImage.classList.add('active');
+    var imageId = currentImage.getAttribute('attr');
+
+    if(imageId > counter){
+        sliderImagen[counter].style.animation = 'next1 0.5s ease-in forwards';
+        counter = imageId;
+        sliderImagen[counter].style.animation = 'next2 0.5s ease-in forwards';
+    }else
+    if(imageId == counter){
+        return
+    }else{
+        sliderImagen[counter].style.animation = 'prev1 0.5s ease-in forwards';
+        counter = imageId;
+        sliderImagen[counter].style.animation = 'prev2 0.5s ease-in forwards';
+    }
+
+    paginacionIndicador();
+}
+
+
 
 /******************* Messenger ***********************/
 /*

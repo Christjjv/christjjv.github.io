@@ -1,0 +1,352 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+/****************** Referente a los Slider ******************/
+.container-slider{
+    position: relative;
+    width: 100%;
+    /*width: 800px;*/
+    height: 400px;
+    margin-top: 100px;
+    border: 3px solid white;
+    box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.2);
+}
+
+.container-slider .slider{
+    width: 100%;
+    /*height: calc(100% - 40px);*/
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.container-slider .slider img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    /*object-fit: cover;*/
+}
+
+.container-slider .slider img:not(.active){
+    top: 0;
+    left: -100%;
+}
+
+span.next, span.prev{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 14px;
+    color: #eee;
+    font-size: 24px;
+    font-weight: bold;
+    transition: 0.5s;
+    border-radius: 3px;
+    user-select: none;
+    cursor: pointer;
+    z-index: 1;
+}
+
+span.next{
+    right: 20px;
+}
+
+span.prev{
+    left: 20px;
+}
+
+span.next:hover, span.prev:hover{
+    background-color: #ede6d6;
+    opacity: 0.8;
+    color: #222;    
+}
+
+.container-paginacion{
+    position: absolute;
+    bottom: 5px;
+    z-index: 3;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.container-paginacion .active{
+    background-color: #555;
+}
+
+.container-paginacion .paginacion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid white;
+    width: 25px;
+    height: 16px;
+    border-radius: 4px;
+    overflow: hidden;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.5);
+    margin: 0 10px;
+    text-align: center;
+    transition: all 300ms;
+}
+
+.container-paginacion .paginacion:hover{
+    transform: scale(2);
+}
+
+.container-paginacion .paginacion img{
+    display: inline-block;
+    max-width: none;
+    height: 100%;
+    transform: scale(1);
+    opacity: 0;
+    transition: all 300ms;
+}
+
+.container-paginacion .paginacion:hover img{
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+@keyframes next1{
+
+    from{
+        left: 0%;
+    }
+
+    to{
+        left: -100%;
+    }
+}
+
+@keyframes next2{
+
+    from{
+        left: 100%;
+    }
+
+    to{
+        left: 0%;
+    }
+}
+
+@keyframes prev1{
+
+    from{
+        left: 0%;
+    }
+
+    to{
+        left: 100%;
+    }
+}
+
+@keyframes prev2{
+
+    from{
+        left: -100%;
+    }
+
+    to{
+        left: 0%;
+    }
+}
+
+@media (max-width: 1100px){
+    
+    .container-slider{
+        height: 300px;
+    }
+}
+
+@media (max-width: 777px){
+
+    .container-slider{
+        height: 200px;
+    }
+
+    .card{
+        width: 300px;
+        height: 200px;
+    }
+}
+
+/************************* Para tarjetas en 3D ***************/
+.container_card{
+    max-width: 1200px;
+    margin: auto;
+    *background: #b88888;
+    margin-top: 50px;
+    perspective: 1000px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card_father{
+    margin: 20px;
+    perspective: 1000px;
+}
+
+.card_father:hover .card{
+    transform: rotateY(180deg);
+}
+
+.card{
+    width: 350px;
+    height: 400px;
+    *background: #c0c0ec;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 600ms;
+}
+
+.card_front,
+.card_back{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    border-radius: 20px;
+}
+
+.card_front{
+    background-size: cover;
+    background-position: center;
+}
+
+.card_back{
+    transform: rotatey(180deg);
+    background: white;
+}
+
+.body_card_front{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    transform: translateZ(60px);
+}
+
+.bg{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+}
+
+.body_card_back{
+    padding: 40px;
+    text-align: center;
+    transform: translateZ(60px);
+}
+
+.body_card_back p{
+    margin-top: 30px;
+    font-size: 18px;
+}
+
+.body_card_back input{
+    padding: 10px 40px;
+    margin-top: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    color: white;
+    background: #58b0f6;
+    box-shadow: 1px 1px 30px -5px #58b0f6;
+    border-radius: 10px;
+    transition: box-shadow 600ms;
+}
+
+.body_card_back input:hover{
+    box-shadow: 1px 1px 30px 0px #449de6;   
+}
+
+
+@media (max-width: 777px){
+
+    .card{
+        width: 300px;
+        height: 300px;
+    }
+
+    .body_card_back p{
+        margin-top: 20px;
+        font-size: 14px;
+    }
+}
+
+
+/************************** MUESTRA ***************************/
+.cover{
+    width: 100%;
+    padding-bottom: 60px;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 100px;
+    /*background: #fc0909;*/
+}
+
+.container_article{
+    max-width: 1000px;
+    padding: 0px 20px;
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.container_article .box_article{
+    width: 200px;
+    height: 250px;
+    background: var(--color0-blanco);
+    margin: 20px;
+}
+
+
+
+
+
+
+/******************************************************/
+
+.texto{
+    position:relative;
+    right: 0;
+    /*
+    max-width: 1200px;
+    margin-top: 100px;
+    padding: 0px 20px;
+    margin: auto;*/
+}
+
+.texto h1{
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.texto p{
+    margin-top: 20px;
+}
