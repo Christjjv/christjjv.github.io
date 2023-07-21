@@ -1,7 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+3:ital,wght@0,200;0,300;0,400;0,500;0,600;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Serif+4:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 
 /****************** Referente a los Slider ******************/
@@ -183,26 +180,27 @@ span.next:hover, span.prev:hover{
 /*************** Para tarjetas en 3D - oferta educativa ********/
 .oferta-educativa{
     width: 100%;
+    /*background: blue;*/
 }
 
+.oferta-educativa h1{
+    text-transform: uppercase;
+}
 .text-oferta{
     max-width: 1200px;
     margin: auto;
-    *background: #b88888;
     margin-top: 30px;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-
-    font-family: 'Nunito', sans-serif;
-    font-size: 20px;
+    /*background: goldenrod;*/
+    font-family: 'Source Serif 4', serif;
+    font-size: 18px;
     font-weight: 800;
 }
 
 .container_card{
     max-width: 1200px;
     margin: auto;
-    *background: #b88888;
     margin-top: 10px;
     perspective: 1000px;
     display: flex;
@@ -222,7 +220,6 @@ span.next:hover, span.prev:hover{
 .card{
     width: 350px;
     height: 400px;
-    *background: #c0c0ec;
     position: relative;
     transform-style: preserve-3d;
     transition: all 600ms;
@@ -315,13 +312,29 @@ span.next:hover, span.prev:hover{
 }
 
 
-/************************** MUESTRA ***************************/
-.cover{
+/********************* Noticas SDG ********************/
+.container-noticias{
     width: 100%;
-    padding-bottom: 60px;
-    font-family: 'Poppins', sans-serif;
-    margin-top: 100px;
-    /*background: #fc0909;*/
+    /*background: white;*/
+}
+
+.text-noticia{
+    max-width: 1200px;
+    height: 50px;
+    margin: auto;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*background: yellowgreen;*/
+
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.text-noticia h1{
+    text-transform: uppercase;
 }
 
 .container_article{
@@ -346,25 +359,110 @@ span.next:hover, span.prev:hover{
 
 
 
-/******************************************************/
+/***************** Servicios Educativos ******************/
 
-.texto{
-    position:relative;
-    right: 0;
-    /*
-    max-width: 1200px;
-    margin-top: 100px;
-    padding: 0px 20px;
-    margin: auto;*/
+.container-serv-edu{
+    width: 100%;
+    /*background: white;*/
 }
 
-.texto h1{
-    margin-top: 150px;
+.text-serv-edu{
+    max-width: 1200px;
+    height: 50px;
+    margin: auto;
+    margin-top: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
+    /*background: yellowgreen;*/
+
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 16px;
+    font-weight: 800;
 }
 
-.texto p{
-    margin-top: 20px;
+.text-serv-edu h1{
+    text-transform: uppercase;
+}
+
+
+/************* Certificaciones y Convenios **************/
+
+.container-alianzas{
+    width: 100%;
+    /*background: white;*/
+}
+
+.certificacion-convenio{
+    max-width: 1200px;
+    height: 400px;
+    margin: auto;
+    margin-top: 40px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*flex-wrap: wrap;*/
+}
+
+.certificacion-all{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.certificacion-all .text-certificacion{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    /*background: cornflowerblue;*/
+}
+
+.certificacion-all .text-certificacion h2{
+    text-transform: uppercase;
+}
+
+.certificacion-all .certificacion{
+    width: 100%;
+    height: 300px;
+    /*background: coral;*/
+}
+
+
+
+.convenio-all{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.convenio-all .text-convenio{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    /*background: burlywood;*/
+}
+
+.convenio-all .text-convenio h2{
+    text-transform: uppercase;
+}
+
+.convenio-all .convenio{
+    width: 100%;
+    height: 300px;
+    /*background: magenta;*/
 }
