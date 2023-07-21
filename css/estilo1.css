@@ -180,12 +180,30 @@ span.next:hover, span.prev:hover{
     }
 }
 
-/************************* Para tarjetas en 3D ***************/
+/*************** Para tarjetas en 3D - oferta educativa ********/
+.oferta-educativa{
+    width: 100%;
+}
+
+.text-oferta{
+    max-width: 1200px;
+    margin: auto;
+    *background: #b88888;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+}
+
 .container_card{
     max-width: 1200px;
     margin: auto;
     *background: #b88888;
-    margin-top: 20px;
+    margin-top: 10px;
     perspective: 1000px;
     display: flex;
     justify-content: center;
