@@ -363,8 +363,11 @@ span.next:hover, span.prev:hover{
 /***************** Servicios Educativos ******************/
 
 .container-serv-edu{
+    max-width: 1200px;
     width: 100%;
+    position: relative;
     scroll-margin-top: 12ex;
+    margin: auto;
     /*background: white;*/
 }
 
@@ -385,6 +388,122 @@ span.next:hover, span.prev:hover{
     font-weight: 700;
     text-transform: uppercase;
 }
+
+.container-serv-edu i{
+    height: 40px;
+    width: 40px;
+    background: white;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    font-size: 1.25rem;
+    transform: translateY(-50%);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.container-serv-edu i:first-child{
+    left: -22px;
+}
+
+.container-serv-edu i:last-child{
+    right: -22px;
+}
+
+.container-serv-edu .carrusel{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 4) - 12px);
+    gap: 16px;
+    /*overflow: hidden;*/
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: 0;
+}
+
+.carrusel::-webkit-scrollbar{
+    display: none;
+}
+
+.carrusel :where(.card, .imagen){/*esto es para centrar los dos clases*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carrusel.no-transition{
+    scroll-behavior: auto;
+}
+
+.carrusel.arrastrarFin{
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+}
+
+.carrusel.arrastrarFin .card{
+    cursor: grab;
+    user-select: none;
+}
+
+.carrusel .card{
+    scroll-snap-align: start;
+    height: 250px;
+    list-style: none;
+    background: white;
+    border-radius: 8px;
+    display: flex;
+    cursor: pointer;
+    padding-bottom: 15px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.card .imagen{
+    background: #8b53ff;    
+    width: 148px;
+    height: 148px;
+    border-radius: 50%;
+}
+
+.card .imagen img{
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid white;
+}
+
+.card h2{
+    font-weight: 500;
+    font-size: 1.56rem;
+    margin: 30px 0 5px;
+}
+
+@media screen and (max-width: 1000px) {
+    
+    .serv-edu .carrusel{
+        grid-auto-columns: calc((100% / 3) - 12px);
+    }
+}
+
+@media screen and (max-width: 800px) {
+    
+    .serv-edu .carrusel{
+        grid-auto-columns: calc((100% / 2) - 9px);
+    }
+}
+
+@media screen and (max-width: 580px) {
+    
+    .serv-edu .carrusel{
+        grid-auto-columns: 100%;
+    }
+}
+
 
 
 /************* Certificaciones y Convenios **************/
