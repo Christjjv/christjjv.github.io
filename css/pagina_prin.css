@@ -180,22 +180,24 @@ span.next:hover, span.prev:hover{
 /*************** Para tarjetas en 3D - oferta educativa ********/
 .oferta-educativa{
     width: 100%;
+    scroll-margin-top: 12ex;
     /*background: blue;*/
 }
 
-.oferta-educativa h1{
-    text-transform: uppercase;
-}
-.text-oferta{
+.oferta-educativa .text-oferta{
     max-width: 1200px;
     margin: auto;
     margin-top: 30px;
     display: flex;
     justify-content: center;
     /*background: goldenrod;*/
+}
+
+.oferta-educativa .text-oferta h2{
     font-family: 'Source Serif 4', serif;
-    font-size: 18px;
-    font-weight: 800;
+    font-size: 28px;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
 .container_card{
@@ -327,13 +329,12 @@ span.next:hover, span.prev:hover{
     justify-content: center;
     align-items: center;
     /*background: yellowgreen;*/
-
-    font-family: 'Source Sans 3', sans-serif;
-    font-size: 16px;
-    font-weight: 800;
 }
 
-.text-noticia h1{
+.text-noticia h2{
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
     text-transform: uppercase;
 }
 
@@ -363,10 +364,11 @@ span.next:hover, span.prev:hover{
 
 .container-serv-edu{
     width: 100%;
+    scroll-margin-top: 12ex;
     /*background: white;*/
 }
 
-.text-serv-edu{
+.container-serv-edu .text-serv-edu{
     max-width: 1200px;
     height: 50px;
     margin: auto;
@@ -374,14 +376,13 @@ span.next:hover, span.prev:hover{
     display: flex;
     justify-content: center;
     align-items: center;
-    /*background: yellowgreen;*/
-
-    font-family: 'Source Sans 3', sans-serif;
-    font-size: 16px;
-    font-weight: 800;
+    /*background: yellowgreen;*/  
 }
 
-.text-serv-edu h1{
+.container-serv-edu .text-serv-edu h2{
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
     text-transform: uppercase;
 }
 
@@ -419,13 +420,14 @@ span.next:hover, span.prev:hover{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Nunito', sans-serif;
-    font-size: 16px;
-    font-weight: 500;
+    
     /*background: cornflowerblue;*/
 }
 
-.certificacion-all .text-certificacion h2{
+.certificacion-all .text-certificacion h3{
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    font-weight: 800;
     text-transform: uppercase;
 }
 
@@ -451,13 +453,13 @@ span.next:hover, span.prev:hover{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Nunito', sans-serif;
-    font-size: 16px;
-    font-weight: 500;
     /*background: burlywood;*/
 }
 
-.convenio-all .text-convenio h2{
+.convenio-all .text-convenio h3{
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    font-weight: 800;
     text-transform: uppercase;
 }
 
