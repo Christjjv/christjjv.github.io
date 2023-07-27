@@ -35,7 +35,7 @@
     width: 100%;
     height: 100%;
     position: absolute;
-    /*object-fit: cover;*/
+    object-fit: fill;
 }
 
 .container-slider .slider img:not(.active){
@@ -79,11 +79,11 @@ span.next:hover, span.prev:hover{
     left: 50%;
     transform: translateX(-50%);
 
-    display: flex;
+    /*display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: 100%;*/
 }
 
 .container-paginacion .active{
@@ -91,7 +91,15 @@ span.next:hover, span.prev:hover{
 }
 
 .container-paginacion .paginacion{
-    display: flex;
+    width: 15px;
+    height: 15px;
+    margin: 0px 2px;
+    border: 3px solid #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+
+    /*display: flex;
     flex-direction: column;
     align-items: center;
     border: 2px solid white;
@@ -103,9 +111,9 @@ span.next:hover, span.prev:hover{
     background: rgba(255, 255, 255, 0.5);
     margin: 0 10px;
     text-align: center;
-    transition: all 300ms;
+    transition: all 300ms;*/
 }
-
+/*
 .container-paginacion .paginacion:hover{
     transform: scale(2);
 }
@@ -122,7 +130,7 @@ span.next:hover, span.prev:hover{
 .container-paginacion .paginacion:hover img{
     opacity: 1;
     transform: scale(1);
-}
+}*/
 
 
 @keyframes next1{
@@ -372,19 +380,24 @@ span.next:hover, span.prev:hover{
 
 
 /***************** Servicios Educativos ******************/
+.servicio-educativo{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 35px;
+}
 
 .container-serv-edu{
     max-width: 1200px;
     width: 100%;
     position: relative;
-    scroll-margin-top: 12ex;
-    margin: auto;
-    /*background: white;*/
+    margin-right: 20px;
 }
 
 .container-serv-edu .text-serv-edu{
     max-width: 1200px;
-    height: 50px;
+    height: 100px;
     margin: auto;
     margin-top: 40px;
     display: flex;
@@ -409,9 +422,10 @@ span.next:hover, span.prev:hover{
     border-radius: 50%;
     cursor: pointer;
     position: absolute;
-    top: 50%;
+    top: 60%;
     font-size: 1.25rem;
-    transform: translateY(-50%);
+    z-index: 2;
+    *transform: translateY(-100%);
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
@@ -426,8 +440,9 @@ span.next:hover, span.prev:hover{
 .container-serv-edu .carrusel{
     display: grid;
     grid-auto-flow: column;
-    grid-auto-columns: calc((100% / 4) - 12px);
-    gap: 16px;
+    grid-auto-columns: calc((100% / 4) - 20px);
+    margin-left: 30px;
+    gap: 20px;
     /*overflow: hidden;*/
     overflow-x: auto;
     scroll-snap-type: x mandatory;
@@ -461,57 +476,64 @@ span.next:hover, span.prev:hover{
 
 .carrusel .card{
     scroll-snap-align: start;
-    width: 230px;
-    height: 220px;
+    width: 280px;
+    height: 150px;
     list-style: none;
-    background: white;
+    position: relative;
+    text-align: center;
     border-radius: 8px;
     display: flex;
-    cursor: pointer;
-    padding-bottom: 5px;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
 
-.card .imagen{
-    background: var(--color5-cas-azu);    
-    width: 198px;
-    height: 148px;
-    *border-radius: 50%;
+.card .imagen{  
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
 }
 
 .card .imagen img{
-    width: 190px;
-    height: 140px;
-    *object-fit: cover;
-    *border-radius: 50%;
-    border: 4px solid white;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    border-radius: 8px;
 }
 
-.card h2{
-    font-weight: 500;
-    font-size: 1.56rem;
-    margin: 20px 0 5px;
+.card .texto-cardSE{
+    position: absolute;
+    font: bold 20px/1 arial;
+    text-transform: uppercase;
+    bottom: 5px;
+    text-shadow: 0 2px 0 #3b4e15;
 }
 
-@media screen and (max-width: 1000px) {
+.card .texto-cardSE a{
+    color: yellowgreen;
+}
+
+.card .texto-cardSE a:hover{
+    color: white;
+}
+
+@media screen and (max-width: 1300px) {
     
-    .serv-edu .carrusel{
+    .container-serv-edu .carrusel{
         grid-auto-columns: calc((100% / 3) - 12px);
     }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 940px) {
     
-    .serv-edu .carrusel{
+    .container-serv-edu .carrusel{
         grid-auto-columns: calc((100% / 2) - 9px);
     }
 }
 
-@media screen and (max-width: 580px) {
+@media screen and (max-width: 650px) {
     
-    .serv-edu .carrusel{
+    .container-serv-edu .carrusel{
         grid-auto-columns: 100%;
     }
 }

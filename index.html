@@ -88,8 +88,6 @@
             <img src="imagen/slider/slider01.jpg" alt="" class="imagenes active">
             <img src="Imagen/slider/slider02.jpg" alt="" class="imagenes">
             <img src="Imagen/slider/slider03.jpg" alt="" class="imagenes">
-            <img src="Imagen/slider/slider04.jpg" alt="" class="imagenes">
-            <img src="Imagen/slider/slider05.jpg" alt="" class="imagenes">
         </div>
 
         <div class="btn">
@@ -99,19 +97,13 @@
 
         <div class="container-paginacion">
             <div class="paginacion active" attr="0" onclick="switchImage(this)">
-                <img src="Imagen/slider/slider01.jpg" alt="">
+                <!--<img src="Imagen/slider/slider01.jpg" alt="">-->
             </div>
             <div class="paginacion" attr="1" onclick="switchImage(this)">
-                <img src="Imagen/slider/slider02.jpg" alt="">
+                <!--<img src="Imagen/slider/slider02.jpg" alt="">-->
             </div>
             <div class="paginacion" attr="2" onclick="switchImage(this)">
-                <img src="Imagen/slider/slider03.jpg" alt="">
-            </div>
-            <div class="paginacion" attr="3" onclick="switchImage(this)">
-                <img src="Imagen/slider/slider04.jpg" alt="">
-            </div>
-            <div class="paginacion" attr="4" onclick="switchImage(this)">
-                <img src="Imagen/slider/slider05.jpg" alt="">
+                <!--<img src="Imagen/slider/slider03.jpg" alt="">-->
             </div>
         </div>
 
@@ -214,64 +206,75 @@
 
 
     <!--************ Servicios Educativos SDG *************-->
-    <div class="container-serv-edu" id="idServiciosEduc">
-        <div class="text-serv-edu">
-            <h2>Servicios Educativos</h2>
+    <div class="servicio-educativo" id="idServiciosEduc">
+
+        <div class="container-serv-edu">
+            <div class="text-serv-edu">
+                <h2>Servicios Educativos</h2>
+            </div>
+            
+            <i id="idIzquierda" class="fa-solid fa-angle-left"></i>
+            
+            <ul class="carrusel">
+                <li class="card">
+                    <div class="imagen">
+                        <img src="imagen/servicio-educ/idukay.png" alt="imagen" draggable="false">
+                    </div>
+                    <div class="texto-cardSE">
+                        <a href="https://idukay.net/" target="_blank">Idukay</a>
+                    </div>
+                </li>
+
+                <li class="card">
+                    <div class="imagen">
+                        <img src="imagen/servicio-educ/imagen2.jpg" alt="imagen" draggable="false">
+                    </div>
+                    <div class="texto-cardSE">
+                        <a href="#">Nombre2</a>
+                    </div>
+                </li>
+
+                <li class="card">
+                    <div class="imagen">
+                        <img src="imagen/servicio-educ/imagen3.webp" alt="imagen" draggable="false">
+                    </div>
+                    <div class="texto-cardSE">
+                        <a href="#">Nombre3</a>
+                    </div>
+                </li>
+
+                <li class="card">
+                    <div class="imagen">
+                        <img src="imagen/servicio-educ/imagen4.jpg" alt="imagen" draggable="false">
+                    </div>
+                    <div class="texto-cardSE">
+                        <a href="#">Nombre4</a>
+                    </div>
+                </li>
+
+                <li class="card">
+                    <div class="imagen">
+                        <img src="imagen/servicio-educ/imagen5.jpeg" alt="imagen" draggable="false">
+                    </div>
+                    <div class="texto-cardSE">
+                        <a href="#">Nombre5</a>
+                    </div>
+                </li>
+
+                <li class="card">
+                    <div class="imagen">
+                        <img src="imagen/servicio-educ/imagen6.gif" alt="imagen" draggable="false">
+                    </div>
+                    <div class="texto-cardSE">
+                        <a href="#">Nombre6</a>
+                    </div>
+                </li>
+            </ul>
+
+            <i id="idDerecha" class="fa-solid fa-angle-right"></i>
         </div>
-        
-        <i id="idIzquierda" class="fa-solid fa-angle-left"></i>
-        <ul class="carrusel">
-            <li class="card">
-                <div class="imagen">
-                    <img src="imagen/servicio-educ/idukay.png" alt="imagen" draggable="false">
-                </div>
-                <h2>Idukay</h2>
-                <!--<span>Sales Manager</span>-->
-            </li>
 
-            <!--<li class="card">
-                <div class="imagen">
-                    <img src="imagen/img-2.jpg" alt="imagen" draggable="false">
-                </div>
-                <h2>Joenas Brauers</h2>
-                <span>Web Developer</span>
-            </li>
-
-            <li class="card">
-                <div class="imagen">
-                    <img src="imagen/img-3.jpg" alt="imagen" draggable="false">
-                </div>
-                <h2>Lariach French</h2>
-                <span>Online Teacher</span>
-            </li>
-
-            <li class="card">
-                <div class="imagen">
-                    <img src="imagen/img-4.jpg" alt="imagen" draggable="false">
-                </div>
-                <h2>James Khosravi</h2>
-                <span>Freelancer</span>
-            </li>
-
-            <li class="card">
-                <div class="imagen">
-                    <img src="imagen/img-5.jpg" alt="imagen" draggable="false">
-                </div>
-                <h2>Kristina Zasiadko</h2>
-                <span>Bank Manager</span>
-            </li>
-
-            <li class="card">
-                <div class="imagen">
-                    <img src="imagen/img-6.jpg" alt="imagen" draggable="false">
-                </div>
-                <h2>Donald Horton</h2>
-                <span>App Designer</span>
-            </li>-->
-        </ul>
-        <i id="idDerecha" class="fa-solid fa-angle-right"></i>
     </div>
-
     
 
     <!--************ certificacion-convenio Educativos SDG *************-->
@@ -380,7 +383,7 @@
         </div>
     </footer>
 
-
+    <script src="js/serv_educ.js"></script>
     <script src="js/script.js"></script>
     <script src="js/slider_prin.js"></script>
 </body>
