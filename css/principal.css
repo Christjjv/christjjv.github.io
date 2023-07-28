@@ -14,12 +14,13 @@
     --color0-blanco: #ffffff;
     --color1-med-neg: #0d0d0d;
     --color2-med-blan: #f2f2f2;
-    --color3-plo-azu: #868ea6;
-    --color4-med-azu: #56638c;
+    --color3-plo-azu: #5e6a8c;
+    --color4-med-azu: #4960a6;
     --color5-cas-azu: #2e3559;
     --color6-color3-opa: #56638ce0;
     --color7-azu-opa: #252b476c;
     --color8-color3-opa1: #868ea667;
+    --color9-vino: #8c1c31;
 }
 
 body{
