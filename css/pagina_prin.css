@@ -377,7 +377,7 @@ span.next:hover, span.prev:hover{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    background: blueviolet;
+    /*background: blueviolet;*/
 }
 
 .container_article .card-notiSDG{
@@ -442,7 +442,7 @@ span.next:hover, span.prev:hover{
     margin: 10px;
     margin-left: auto;
     margin-right: auto;
-    background: red;
+    /*background: red;*/
 }
 
 .video-sdg{
@@ -473,22 +473,34 @@ span.next:hover, span.prev:hover{
 @media screen and (max-width: 1139px) {
     
     .noticia-sdg{
-        height: 800px;
+        height: 500px;
+    }
+  
+}
+
+@media screen and (max-width: 1119px) {
+    
+    .noticia-sdg{
+        height: 850px;
+    }
+  
+    .card-video{
+        width: 500px;
+        height: 350px;
+        margin: 0px;
     }
 
-    .card-video{
-        height: 300px;
-    }
 }
 
 @media screen and (max-width: 579px) {
     
     .noticia-sdg{
-        height: 1220px;
+        height: 1170px;
     }
 
     .card-video{
-        height: 250px;
+        width: 250px;
+        height: 200px;
         margin: 0px;
     }
 
@@ -497,10 +509,12 @@ span.next:hover, span.prev:hover{
 /***************** Servicios Educativos ******************/
 .servicio-educativo{
     width: 100%;
+    margin-top: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 0 35px;
+    background: maroon;
 }
 
 .container-serv-edu{
@@ -514,7 +528,7 @@ span.next:hover, span.prev:hover{
     max-width: 1200px;
     height: 100px;
     margin: auto;
-    margin-top: 40px;
+    /*margin-top: 40px;*/
     display: flex;
     justify-content: center;
     align-items: center;
@@ -653,6 +667,12 @@ span.next:hover, span.prev:hover{
     }
 }
 
+@media screen and (max-width: 387px) {
+    
+    .container-serv-edu .text-serv-edu h2{
+        font-size: 22px;
+    }
+}
 
 
 /************* Certificaciones y Convenios **************/
