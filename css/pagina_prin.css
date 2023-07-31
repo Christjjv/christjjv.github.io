@@ -13,6 +13,11 @@
     --color9-vino: #8c1c31;
 }
 
+main{
+    width: 100%;
+    margin: auto;
+}
+
 /****************** Referente a los Slider ******************/
 .container-slider{
     position: relative;
@@ -335,13 +340,19 @@ span.next:hover, span.prev:hover{
 
 
 /********************* Noticas SDG ********************/
-.container-noticias{
+.noticia-sdg{
     width: 100%;
+    *position: relative;
     /*background: white;*/
+}
+.container-noticias{
+    max-width: 1200px;
+    height: 535px;
+    margin: auto;
+    /*background: yellowgreen;*/
 }
 
 .text-noticia{
-    max-width: 1200px;
     height: 50px;
     margin: auto;
     margin-top: 40px;
@@ -359,26 +370,129 @@ span.next:hover, span.prev:hover{
 }
 
 .container_article{
-    max-width: 1000px;
+    height: 465px;
     padding: 0px 20px;
     margin: auto;
     margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    background: blueviolet;
 }
 
-.container_article .box_article{
-    width: 200px;
-    height: 250px;
+.container_article .card-notiSDG{
     background: var(--color0-blanco);
-    margin: 20px;
+    width: 250px;
+    height: 450px;
+    margin: 10px;
+    border-radius: 15px;
 }
 
+.card_imagen{
+    height: 200px;
+    margin-bottom: 15px;
+    background-size: cover;
+    border-radius: 15px 15px 0 0;
+}
 
+.card-noti1{
+    background-image: url(../imagen/noticias-sdg/principal/noticia01.jpg);
+}
 
+.card-noti2{
+    background-image: url(../imagen/noticias-sdg/principal/noticia02.jpg);
+}
 
+.card-noti3{
+    background-image: url(../imagen/noticias-sdg/principal/noticia03.jpg);
+}
 
+.card-notiSDG h2{
+    padding: 10px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.card-notiSDG p{
+    padding: 10px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.card-notiSDG a{
+    background-color: black;
+    color: white;
+    padding: 15px 20px;
+    display: block;
+    text-align: center;
+    margin: 20px 50px;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: none;
+}
+
+.card-notiSDG:hover{
+    background-color: rgb(62, 62, 62);
+    color: white;
+    /*cursor: pointer;*/
+    transform: scale(1.03);
+    transition: all 1s ease;
+}
+
+.card-video{
+    width: 50%;
+    height: 450px;
+    margin: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    background: red;
+}
+
+.video-sdg{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    /*background: yellow;*/
+}
+
+.video-sdg::after{
+    content: "";
+    display: block;
+    width: 100%;
+    padding-bottom: 56.25%;
+}
+
+.video-conf{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /*background: maroon;*/
+}
+
+@media screen and (max-width: 1139px) {
+    
+    .noticia-sdg{
+        height: 800px;
+    }
+
+    .card-video{
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 579px) {
+    
+    .noticia-sdg{
+        height: 1220px;
+    }
+
+    .card-video{
+        height: 250px;
+        margin: 0px;
+    }
+
+}
 
 /***************** Servicios Educativos ******************/
 .servicio-educativo{
