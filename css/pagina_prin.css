@@ -342,12 +342,13 @@ span.next:hover, span.prev:hover{
 /********************* Noticas SDG ********************/
 .noticia-sdg{
     width: 100%;
+    height: 535px;
     *position: relative;
     /*background: white;*/
 }
 .container-noticias{
     max-width: 1200px;
-    height: 535px;
+    height: 100%;
     margin: auto;
     /*background: yellowgreen;*/
 }
@@ -513,7 +514,7 @@ span.next:hover, span.prev:hover{
     }
 
     .container_article .card-notiSDG{
-        height: 470px;
+        height: 500px;
     }
 }
 
