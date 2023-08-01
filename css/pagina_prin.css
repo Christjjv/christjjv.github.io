@@ -493,21 +493,9 @@ span.next:hover, span.prev:hover{
 
 }
 
-@media screen and (max-width: 579px) {
-    
-    .noticia-sdg{
-        height: 1170px;
-    }
 
-    .card-video{
-        width: 250px;
-        height: 200px;
-        margin: 0px;
-    }
 
-}
-
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 600px) {
     
     .noticia-sdg{
         height: 1220px;
