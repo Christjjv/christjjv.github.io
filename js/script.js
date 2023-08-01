@@ -37,7 +37,7 @@ function mostrar_menu(){
 
 
 /******************* Messenger ***********************/
-
+/*
 var chatbox = document.getElementById('fb-customer-chat');
 chatbox.setAttribute("page_id", "112327411899958");
 chatbox.setAttribute("attribution", "biz_inbox");
@@ -56,4 +56,4 @@ window.fbAsyncInit = function() {
     js = d.createElement(s); js.id = id;
     js.src = 'https://connect.facebook.net/es_LA/sdk/xfbml.customerchat.js';
     fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
+}(document, 'script', 'facebook-jssdk'));*/
