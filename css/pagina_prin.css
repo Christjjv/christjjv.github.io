@@ -493,22 +493,30 @@ span.next:hover, span.prev:hover{
 
 }
 
-
-
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 579px) {
     
     .noticia-sdg{
-        height: 1220px;
+        height: 1280px;
     }
 
     .container_article .card-notiSDG{
-        height: 500px;
+        height: 460px;
     }
 
+    .card-video{
+        width: 400px;
+        height: 300px;
+        margin: 0px;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    
     .card-notiSDG a{
         font-size: 14px;
         padding: 10px 15px;
-        margin: 15px 40px;
+        margin: 15px 20px;
     }
 }
 
