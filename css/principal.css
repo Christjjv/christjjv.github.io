@@ -415,17 +415,19 @@ nav ul li ul li{
 
 
 /****** Contenedor de whastapp y messenger ******/
-/*.whast-messeng{
+.whast-messeng{
     position: fixed;
     bottom: 20px;
     right: 8px;
     display: flex;
-    flex-direction: column;
+    /*flex-direction: column;*/
     justify-content: center;
 }
 
 .whast-messeng a{
-    margin-top: 4px;
+    /*margin-top: 4px;*/
+    margin-bottom: 43px;
+    margin-right: 11px;
 }
 .whast-messeng img{
     width: 50px;
@@ -439,12 +441,12 @@ nav ul li ul li{
 .whast-messeng a:hover img{
     background: rgba(0, 0, 0, 0.10);
 }
-*/
+
 
 /*********** Footer ********************/
 footer{
     width: 100%;
-    *background-image: url(../imagen/background-footer.svg);
+    /*background-image: url(../imagen/background-footer.svg);*/
     background: var(--color5-cas-azu);
     color: var(--color0-blanco);
 }
