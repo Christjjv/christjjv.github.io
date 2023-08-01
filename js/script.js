@@ -40,7 +40,7 @@ function mostrar_menu(){
 var chatbox = document.getElementById('fb-customer-chat');
 chatbox.setAttribute("page_id", "112327411899958");
 chatbox.setAttribute("attribution", "biz_inbox");
-chatbox.setAttribute("theme_color", "#0A7CFF");
+chatbox.setAttribute("theme_color", "#ffc300");
 chatbox.setAttribute("alignment", "right");
 chatbox.setAttribute("desktop_bottom_spacing", "20");
 chatbox.setAttribute("mobile_bottom_spacing", "10");
