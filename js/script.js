@@ -41,8 +41,7 @@ var chatbox = document.getElementById('fb-customer-chat');
 chatbox.setAttribute("page_id", "112327411899958");
 chatbox.setAttribute("attribution", "biz_inbox");
 chatbox.setAttribute("theme_color", "#0A7CFF");
-chatbox.setAttribute("alignment", "left");
-//chatbox.setAttribute("margin-bottom", "10px");
+chatbox.setAttribute("margin-bottom", "10px");
 
 
 // Your SDK code 
