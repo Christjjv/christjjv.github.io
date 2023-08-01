@@ -525,7 +525,7 @@ span.next:hover, span.prev:hover{
     align-items: center;
     justify-content: center;
     padding: 0 35px;
-    background: maroon;
+    /*background: maroon;*/
 }
 
 .container-serv-edu{
@@ -737,6 +737,7 @@ span.next:hover, span.prev:hover{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .certificacion-sdg{
@@ -782,6 +783,7 @@ span.next:hover, span.prev:hover{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .convenio-sdg{
@@ -793,4 +795,19 @@ span.next:hover, span.prev:hover{
 .convenio-sdg img{
     width: 100%;
     height: 100%;
+}
+
+@media screen and (max-width: 700px) {
+    
+    .container-alianzas{
+        height: 470px;
+    }
+
+    .certificacion-all{
+        margin-bottom: 30px;
+    }
+
+    .certificacion-convenio{
+        flex-direction: column;
+    }
 }
