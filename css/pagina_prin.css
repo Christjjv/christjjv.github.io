@@ -506,6 +506,17 @@ span.next:hover, span.prev:hover{
 
 }
 
+@media screen and (max-width: 294px) {
+    
+    .noticia-sdg{
+        height: 1220px;
+    }
+
+    .container_article .card-notiSDG{
+        height: 470px;
+    }
+}
+
 /***************** Servicios Educativos ******************/
 .servicio-educativo{
     width: 100%;
