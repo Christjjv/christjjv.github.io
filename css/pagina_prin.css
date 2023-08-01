@@ -693,14 +693,14 @@ span.next:hover, span.prev:hover{
 
 .container-alianzas{
     width: 100%;
+    height: 300px;
     /*background: white;*/
 }
 
 .certificacion-convenio{
     max-width: 1200px;
-    height: 400px;
     margin: auto;
-    margin-top: 40px;
+    margin-top: 70px;
     position: relative;
     display: flex;
     justify-content: center;
