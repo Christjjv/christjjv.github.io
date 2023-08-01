@@ -415,7 +415,7 @@ nav ul li ul li{
 
 
 /****** Contenedor de whastapp y messenger ******/
-.whast-messeng{
+/*.whast-messeng{
     position: fixed;
     bottom: 20px;
     right: 8px;
@@ -439,7 +439,7 @@ nav ul li ul li{
 .whast-messeng a:hover img{
     background: rgba(0, 0, 0, 0.10);
 }
-
+*/
 
 /*********** Footer ********************/
 footer{
