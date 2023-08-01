@@ -507,7 +507,7 @@ span.next:hover, span.prev:hover{
 
 }
 
-@media screen and (max-width: 270px) {
+@media screen and (max-width: 294px) {
     
     .noticia-sdg{
         height: 1220px;
@@ -517,8 +517,10 @@ span.next:hover, span.prev:hover{
         height: 500px;
     }
 
-    .video-conf{
-        margin-top: 10px;
+    .card-notiSDG a{
+        font-size: 14px;
+        padding: 10px 15px;
+        margin: 15px 40px;
     }
 }
 
