@@ -40,7 +40,7 @@ function mostrar_menu(){
 var chatbox = document.getElementById('fb-customer-chat');
 chatbox.setAttribute("page_id", "112327411899958");
 chatbox.setAttribute("attribution", "biz_inbox");
-chatbox.setAttribute("theme_color", "#0084FF");
+chatbox.setAttribute("theme_color", "#2e3559");
 
 
 // Your SDK code 
