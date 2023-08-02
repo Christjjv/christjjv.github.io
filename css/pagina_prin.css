@@ -528,6 +528,7 @@ span.next:hover, span.prev:hover{
     align-items: center;
     justify-content: center;
     padding: 0 35px;
+    scroll-margin-top: 8ex;
     /*background: maroon;*/
 }
 
