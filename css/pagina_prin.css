@@ -183,14 +183,14 @@ span.next:hover, span.prev:hover{
     }
 }
 
-@media (max-width: 1100px){
+@media screen and (max-width: 1100px){
     
     .container-slider{
         height: 300px;
     }
 }
 
-@media (max-width: 777px){
+@media screen and (max-width: 777px){
 
     .container-slider{
         height: 200px;
@@ -325,7 +325,7 @@ span.next:hover, span.prev:hover{
 }
 
 
-@media (max-width: 777px){
+@media screen and (max-width: 777px){
 
     .card{
         width: 300px;

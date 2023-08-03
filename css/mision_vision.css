@@ -27,6 +27,11 @@ body{
     background: var(--color2-med-blan);
 }
 
+.container{
+    width: 100%;
+    position: relative;
+}
+
 .container-MisVis-cover{
     width: 100%;
     height: 350px;
@@ -63,7 +68,6 @@ body{
 
 .container-MisVis-titu h1{
     font-size: 60px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: 500;
     color: white;
     margin-bottom: 20px;
@@ -72,7 +76,6 @@ body{
 .container-MisVis-titu p{
     color: white;
     font-size: 20px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 300;
 }
 
@@ -102,6 +105,14 @@ body{
     flex-direction: column;
 }
 
+.misVis p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.misVis h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
 .nosotros{
     scroll-margin-top: 10ex;
 }
@@ -127,4 +138,93 @@ body{
     width: 550px;
     height: 500px;
     margin-left: 20px;
+}
+
+
+@media screen and (max-width: 1171px){
+
+    .container-MisVis-img img{
+        width: 450px;
+        height: 400px;
+        margin-left: 20px;
+    }
+
+}
+
+@media screen and (max-width: 1071px){
+
+    .container-MisVis-info{
+        width: 40%;
+        margin-right: 0px;
+    }
+
+    .container-MisVis-img{
+        width: 450px;
+        height: 400px;
+        margin-left: 0px;
+    }
+    .container-MisVis-img img{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+    }
+
+}
+
+@media screen and (max-width: 969px){
+
+    .container-MisVis-cover{
+        height: 250px;
+    }
+
+    .container-MisVis-info{
+        width: 40%;
+    }
+
+    .container-MisVis-img{
+        width: 350px;
+        height: 300px;
+        margin-left: 0px;
+    }
+}
+
+@media screen and (max-width: 852px){
+
+    .container-MisVis-titu{
+        width: 300px;
+    }
+
+    .container-MisVis-titu h1{
+        margin-top: -90px;
+        font-size: 40px;
+    }
+    
+    .container-MisVis-titu p{
+        font-size: 15px;
+    }
+
+    
+    .container-MisVis-all{
+        margin-left: 0;
+    }
+
+    .container-MisVis{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .container-MisVis-info{
+        width: 300px;
+    }
+
+    .container-MisVis-img{
+        margin-top: 10px;
+        margin-left: -40px;
+    }
+
 }
