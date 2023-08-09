@@ -1,0 +1,239 @@
+
+:root{
+    --color0-blanco: #ffffff;
+    --color1-med-neg: #0d0d0d;
+    --color2-med-blan: #f2f2f2;
+    --color3-plo-azu: #5e6a8c;
+    --color4-med-azu: #4960a6;
+    --color5-cas-azu: #2e3559;
+    --color6-color3-opa: #56638ce0;
+    --color7-azu-opa: #252b476c;
+    --color8-color3-opa1: #868ea667;
+    --color9-vino: #8c1c31;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background: #f2f2f2;
+}
+
+.all{
+    width: 100%;
+}
+
+.linea-tiempo{
+    width: 1200px;
+    margin-top: 40px;
+    margin: auto;
+}
+
+/*Selección de texto*/
+::selection{
+    color: #fff;
+    background: #ffa703;
+}
+
+.LT-titulo {
+    display: inline-block;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 10px;
+    border: none;
+    font: normal 38px / normal "Warnes", Helvetica, sans-serif;
+    color: rgba(255, 255, 255, 1);
+    text-decoration: normal;
+    text-align: center;
+    -o-text-overflow: clip;
+    text-overflow: clip;
+    white-space: pre;
+    text-shadow: 0 0 10px rgb(255, 0, 0), 0 0 20px rgba(255, 0, 0), 0 0 30px rgba(255, 0, 0), 0 0 40px #727272, 0 0 70px #727272, 0 0 80px #4e4e4e, 0 0 100px #2b2b2b;
+    -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+    -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+    -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+    transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+    width: 100%;
+    margin-top: 10px;
+}
+
+.LT-titulo:hover {
+    text-shadow: 0 0 10px rgb(69, 0, 109), 0 0 20px rgb(73, 0, 95), 0 0 30px rgb(57, 0, 68), 0 0 40px #580054, 0 0 70px #000000, 0 0 80px #000000, 0 0 100px #000000;
+}
+
+  /*Envoltura*/
+.wrapper{
+    max-width: 1080px;
+    margin: 30px auto;
+    padding: 0 20px;
+    position: relative;
+}
+
+.wrapper .center-line{
+    position: absolute;
+    height: 100%;
+    width: 4px;
+    background: #d1d1d1;
+    left: 50%;
+    top: 20px;
+    transform: translateX(-50%);
+}
+
+.wrapper .fila{
+    display: flex;
+}
+
+.wrapper .fila section{
+    background: #fff;
+    border-radius: 5px;
+    width: calc(50% - 40px);
+    padding: 20px;
+    position: relative;
+    box-shadow: 0 0 0 4px #fff, inset 2px 2px rgba(0, 0, 0, 0.253), 3px 4px rgba(0, 0, 0, 0.144);
+}
+
+.wrapper .fila section::before{
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    background: #fff;
+    top: 28px;
+    z-index: -1;
+    transform: rotate(45deg);
+}
+
+  /*izquierda*/
+.wrapper .fila-1{
+    justify-content: flex-start;
+}
+
+.fila-1 section::before{
+    right: -7px;
+}
+
+.fila-1 section .icon{
+    top: 15px;
+    right: -60px;
+}
+
+/*derecha*/
+.wrapper .fila-2{
+    justify-content: flex-end;
+}
+
+.fila-2 section::before{
+    left: -7px;
+}
+
+.fila-2 section .icon{
+    top: 15px;
+    left: -60px;
+}
+
+/*Botón subir arriba*/
+.center-line .scroll-icon{
+    bottom: 0px;
+    left: 50%;
+    font-size: 25px;
+    transform: translateX(-50%);
+}
+
+/*Líneas*/
+.fila section .icon,
+.center-line .scroll-icon{
+  position: absolute;
+  background: #f2f2f2;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  line-height: 40px;
+  color: #89009b;
+  font-size: 17px;
+  box-shadow: 0 0 0 4px #fff, inset 0 2px 0 rgba(0, 0, 0, 0.253), 0 3px 0 4px rgba(0, 0, 0, 0.144);
+}
+
+.fila section .detalle,
+.fila section .bottom{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.fila section .detalle .titulo{
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.fila section p{
+  margin: 10px 0 17px 0;
+}
+
+/*Botones leer más*/
+/*.fila section .bottom a{
+  text-decoration: none;
+  background: #2f003d;
+  color: #fff;
+  padding: 7px 15px;
+  border-radius: 5px;
+  font-weight: 400;
+  transition: all 0.3s ease;
+}
+
+.fila section .bottom a:hover{
+  transform: scale(0.97);
+  background: #9f00cf;
+}*/
+
+@media(max-width: 1250px){
+
+    .linea-tiempo{
+        width: 100%;
+        margin-left: 10px;
+    }
+}
+
+@media(max-width: 790px){
+
+    .wrapper .center-line{
+      left: 40px;
+    }
+
+    .wrapper .fila{
+      margin: 30px 0 3px 60px;
+    }
+
+    .wrapper .fila section{
+      width: 100%;
+    }
+
+    .fila-1 section::before{
+      left: -7px;
+    }
+
+    .fila-1 section .icon{
+      left: -60px;
+    }
+}
+
+@media(max-width: 440px){
+
+    .wrapper .center-line,
+    .fila section::before,
+    .fila section .icon{
+      display: none;
+    }
+
+    .wrapper .fila{
+      margin: 10px 0;
+    }
+}
